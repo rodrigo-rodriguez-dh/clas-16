@@ -4,8 +4,8 @@ server:
 spring:
   cloud:
     gateway:
-      filters:
-        - name: Logging
+      default-filters:
+        - name: LoggingFilter
       routes:
         - id: movieRoute
           uri: lb://movie-service
